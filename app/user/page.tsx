@@ -3,7 +3,8 @@
 import axios from "axios";
 
 export default async  function user() {
- const response = await axios.get("https://jsonplaceholder.typicode.com/users/1");
+ const response = await axios.get("http://localhost:3000/api/v1/user/details");
+ await new Promise(r => setTimeout(r,5000));
  const data = response.data;
  
 
